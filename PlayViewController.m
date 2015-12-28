@@ -46,6 +46,7 @@
     _baView.backgroundColor=[[UIColor blackColor]colorWithAlphaComponent:0.6];
      [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(decletcircle) userInfo:nil repeats:YES];
     XDCache *Manager=[XDCache defoultXDCahe];
+    self.sizeLabel.text=@"0KB";
     NSString *size=[NSString stringWithFormat:@"%lu",(unsigned long)[Manager getCacheSize]-68];
     self.sizeLabel.text=[NSString stringWithFormat:@"缓存大小：%@KB",size];
 }
